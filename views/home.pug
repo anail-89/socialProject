@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='../stylesheets/style.css')
+    script( src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous")
+    script(type="module" src="../javascripts/pages/home.js")
+  body
+    h1(id='user-name') Home page
+    h1 Find new friends
+    input(name="find-friend" placeholder="search friend")
+    table(id="users" class="tbl")
+      thead
+        tr
+          th name
+          th id
+      tbody
+    br
+    br
+    h1 Friend Requests
+    table(id="requests" class="tbl")
+      thead
+        tr
+          th name
+          th id
+      tbody
+    br
+    br
+        
+    div(id="friends-list")
+      h1 My Friends
+      table(id="friends" class="tbl")
+      thead
+        tr
+          th name
+          th id
+      tbody
+       
+    button(id="log-out") LogOut
+     
+    

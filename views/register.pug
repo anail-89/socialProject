@@ -1,0 +1,23 @@
+extends layout-register
+
+block content 
+    div.wrapper-register
+        h1 Register
+        form(action = "/auth/register" name="register-form" method="post" id="register-form")
+            label username:
+            input(type="text" name="username")
+            br
+            label name:
+                input(type="text" name="name")
+            br
+            label email:
+                input(type="email" name="email")
+            br
+            label password:
+                input( type="text" name="password")
+            br
+            label
+                input(type="file" name="image" multiple)
+            br
+            label(id="error")
+            input.btn-register-2(type="submit" value="Register" id="register")

@@ -1,0 +1,137 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: url("../images/bg.jpg");
+    background-repeat: repeat;
+    background-origin: border-box;
+    background-size: cover;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.wrapper {
+    margin: 100px auto;
+    padding: 10px;
+    width: 500px;
+    height: 100px;
+}
+
+.wrapper h1 {
+    color: rgb(103, 83, 128);
+    text-align: center;
+}
+
+.btn-login,
+.btn-register {
+    background-color: rgb(227, 230, 236);
+    color: rgb(15, 13, 146);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: 1px solid grey;
+}
+
+.btn-login a,
+.btn-register a {
+    text-decoration: none !important;
+}
+
+.btn-login {
+    float: right;
+}
+
+.btn-register {
+    float: left;
+}
+
+
+/* register page*/
+
+.wrapper-register,
+.wrapper-login {
+    padding: 15px;
+    margin: 20px auto;
+    width: 150px;
+    color: rgb(150, 40, 165);
+    font-weight: 700;
+}
+
+.wrapper-register h1,
+.wrapper-login h1 {
+    text-align: center;
+}
+
+input,
+label {
+    margin: 7px;
+}
+
+input {
+    display: inline-block;
+    border-radius: 3px;
+    border-color: grey;
+    padding: 7px;
+}
+
+.btn-register-2 {
+    background-color: rgb(227, 230, 236);
+    color: rgb(15, 13, 146);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid grey;
+    width: 150px;
+    margin: 5px auto;
+}
+
+.btn-login-2 {
+    display: inline-block;
+    background-color: rgb(227, 230, 236);
+    color: rgb(15, 13, 146);
+    padding: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid grey;
+    width: 100px;
+    margin: 5px auto;
+}
+
+#error {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.tbl,
+th,
+tr,
+td {
+    border-collapse: collapse;
+    border: 1px solid green;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.tbl {
+    width: 300px;
+}
+
+#friends-list {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 15px;
+    top: 115px;
+    background-color: #eee5e5;
+    color: green;
+    font-size: 14px;
+    padding: 10px;
+}
