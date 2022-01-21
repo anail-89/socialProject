@@ -14,6 +14,13 @@ var postsRouter = require('./routes/posts');
 var authRouter = require('./routes/auth');
 
 var app = express();
+//socket io
+var sockIO = require('socket.io');
+app.sockIO = sockIO;
+// sockIO.on('connection', function(socket) {
+//     console.log('A client connection occurred!');
+// })
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

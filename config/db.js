@@ -46,7 +46,7 @@
 //     }
 // });
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize('test8', 'postgres', 'root', {
+const sequelize = new Sequelize('test8', 'postgres', 'postgres', {
     host: 'localhost',
     dialect: 'postgresql'
 });

@@ -1,5 +1,5 @@
 import { getCurrentUserData, findUsers, friendRequest, getFriendRequests, acceptedRequest, getFriends } from '../api/users.js';
-import { io } from 'socket.io-client';
+
 
 window.addEventListener('load', () => {
     document.getElementById('log-out').addEventListener('click', (e) => {

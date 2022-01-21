@@ -26,13 +26,21 @@ app.set('port', port);
  */
 var server = http.createServer(app);
 
+var sockIO = app.sockIO;
+
+
 db.sequelize.authenticate().then(() => {
     console.log('connected');
     db.sequelize.sync({}).then(() => {
         console.log('sync');
 
-
-        http.createServer(app).listen(3000);
+        server.listen(3000);
+        const io = sockIO(server);
+        io.on('connection', socket => {
+            console.log('server connect');
+        });
+        // http.createServer(app).listen(3000);
+        // sockIO.listen(server); 
         server.on('error', onError);
         server.on('listening', onListening);
     });
