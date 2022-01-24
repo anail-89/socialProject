@@ -5,9 +5,10 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('socialproject:server');
+var debug = require('debug')('server');
 var http = require('http');
 const db = require('../models');
+const sockIO = require("../socket");
 /**
  * Get port from environment and store in Express.
  */
@@ -26,19 +27,28 @@ app.set('port', port);
  */
 var server = http.createServer(app);
 
-var sockIO = app.sockIO;
+
+
+
+
+//var sockIO = app.sockIO;
+
+
+
 
 
 db.sequelize.authenticate().then(() => {
     console.log('connected');
     db.sequelize.sync({}).then(() => {
         console.log('sync');
-
         server.listen(3000);
-        const io = sockIO(server);
-        io.on('connection', socket => {
-            console.log('server connect');
-        });
+        sockIO(server);
+
+        // const io = sockIO(server);
+        // io.on('connection', (client) => {
+        //     client.emit('hello', 'world');
+        //     console.log('server connect');
+        // });
         // http.createServer(app).listen(3000);
         // sockIO.listen(server); 
         server.on('error', onError);

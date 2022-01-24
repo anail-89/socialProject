@@ -4,7 +4,7 @@ const { Sequelize } = require('sequelize');
 //     host: config.host,
 //     dialect: config.dialect
 // });
-const sequelize = new Sequelize('test8', 'postgres', 'postgres', {
+const sequelize = new Sequelize('test8', 'postgres', 'root', {
     host: 'localhost',
     dialect: 'postgresql'
 });
